@@ -49,7 +49,7 @@ df = (
 
 # Feature engineering
 
-df = df.withColum(
+df = df.withColumn(
   "trip_duration_min",
   (F.unix_timestamp("tpep_dropoff_datetime") - F.unix_timestamp("tpep_pickup_datetime")) / 60.0,
 )
